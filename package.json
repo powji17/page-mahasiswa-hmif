@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/output.css --minify",
+    "preview": "serve .",
+    "start": "npm run preview"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +15,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.4",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.2.4"
   }
 }
