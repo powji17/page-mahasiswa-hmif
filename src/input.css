@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warna kustom sesuai SDD LIMA EM */
+  --color-hmif-primary: #0B2F4C;
+  --color-hmif-secondary: #F5C82F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
