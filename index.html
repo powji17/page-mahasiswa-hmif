@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -594,6 +594,179 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================
+         GALERI KESERUAN
+         Kumpulan foto dokumentasi kegiatan Informatika
+         dalam format bento grid dengan auto-slide.
+         Slide otomatis setiap 4 detik, bisa navigasi manual.
+         ============================================ -->
+    <section id="galeri" class="bg-white py-20 lg:py-24">
+        <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12">
+
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-hmif-primary">
+                    Galeri Keseruan
+                </h2>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="relative">
+
+                <!-- Left Arrow Button -->
+                <button id="galeri-prev"
+                    style="top: 50%; transform: translateY(-50%);"
+                    class="absolute -left-4 lg:-left-12 z-10 w-11 h-11 bg-white border border-gray-200 hover:border-hmif-primary rounded-full flex items-center justify-center shadow-md hover:shadow-lg text-slate-600 hover:text-hmif-primary transition-all cursor-pointer"
+                    aria-label="Sebelumnya">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+
+                <!-- Viewport: overflow-hidden agar slide lain tidak terlihat -->
+                <div id="galeri-viewport" class="overflow-hidden rounded-2xl">
+
+                    <!-- Track: semua slide berjejer horizontal -->
+                    <div id="galeri-track" class="flex transition-transform duration-700 ease-in-out">
+
+                        <!-- ====== Slide 1 ====== -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
+
+                                <!-- Foto besar kiri (span 2 baris) -->
+                                <div class="col-span-1 row-span-2 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/silaturahmi.png"
+                                        alt="Silaturahmi Keluarga Besar Informatika"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 1 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/upc_2025.png"
+                                        alt="UPC 2025"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 2 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/bootcamp.png"
+                                        alt="Bootcamp HMIF"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto lebar kanan bawah (span 2 kolom) -->
+                                <div class="col-span-2 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/ultah_informatika.png"
+                                        alt="Ulang Tahun Informatika UNTAN"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ====== Slide 2 ====== -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
+
+                                <!-- Foto besar kiri -->
+                                <div class="col-span-1 row-span-2 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/upc_2025.png"
+                                        alt="UPC 2025"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 1 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/bootcamp.png"
+                                        alt="Bootcamp HMIF"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 2 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/silaturahmi.png"
+                                        alt="Silaturahmi Keluarga Besar Informatika"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto lebar kanan bawah -->
+                                <div class="col-span-2 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/ultah_informatika.png"
+                                        alt="Ulang Tahun Informatika UNTAN"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ====== Slide 3 ====== -->
+                        <div class="flex-shrink-0 w-full">
+                            <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
+
+                                <!-- Foto besar kiri -->
+                                <div class="col-span-1 row-span-2 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/ultah_informatika.png"
+                                        alt="Ulang Tahun Informatika UNTAN"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 1 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/silaturahmi.png"
+                                        alt="Silaturahmi Keluarga Besar Informatika"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto kecil kanan atas 2 -->
+                                <div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/upc_2025.png"
+                                        alt="UPC 2025"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                                <!-- Foto lebar kanan bawah -->
+                                <div class="col-span-2 row-span-1 overflow-hidden rounded-xl">
+                                    <img src="./assets/images/bootcamp.png"
+                                        alt="Bootcamp HMIF"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- end galeri-track -->
+                </div><!-- end galeri-viewport -->
+
+                <!-- Right Arrow Button -->
+                <button id="galeri-next"
+                    style="top: 50%; transform: translateY(-50%);"
+                    class="absolute -right-4 lg:-right-12 z-10 w-11 h-11 bg-white border border-gray-200 hover:border-hmif-primary rounded-full flex items-center justify-center shadow-md hover:shadow-lg text-slate-600 hover:text-hmif-primary transition-all cursor-pointer"
+                    aria-label="Berikutnya">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+
+            </div><!-- end slider wrapper -->
+
+            <!-- Dot Indicators -->
+            <div id="galeri-dots" class="flex justify-center gap-2 mt-8">
+                <button class="galeri-dot h-2.5 rounded-full bg-hmif-primary transition-all duration-300 w-6"
+                    data-index="0" aria-label="Slide 1"></button>
+                <button class="galeri-dot h-2.5 rounded-full bg-gray-200 transition-all duration-300 w-2.5"
+                    data-index="1" aria-label="Slide 2"></button>
+                <button class="galeri-dot h-2.5 rounded-full bg-gray-200 transition-all duration-300 w-2.5"
+                    data-index="2" aria-label="Slide 3"></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JavaScript eksternal (logika interaksi dipisah dari HTML) -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
