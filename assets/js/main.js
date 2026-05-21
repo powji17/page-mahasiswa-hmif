@@ -12,6 +12,17 @@
 
 (function () {
 
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function () {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isHidden);
+            mobileMenuButton.setAttribute('aria-expanded', String(isHidden));
+        });
+    }
+
     // --- Konfigurasi ---
     const TOTAL_SLIDES = 3;
     const AUTO_DELAY_MS = 4000; // 4 detik per slide
