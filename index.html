@@ -146,65 +146,59 @@
     <!-- About Section -->
     <section id="about" class="bg-white">
         <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12 pt-20 lg:pt-24 pb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-stretch">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 <!-- ΓöÇΓöÇΓöÇ Left: Text Content ΓöÇΓöÇΓöÇ -->
-                <div class="flex flex-col order-1 lg:pr-12 h-full">
+                <div class="flex flex-col space-y-5 order-1">
 
-                    <!-- Heading tetap di atas -->
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-hmif-primary leading-tight mb-4 lg:mb-0">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
                         Ruang Tumbuh Bagi<br class="hidden sm:block"> Mahasiswa Informatika
                     </h2>
 
-                    <!-- Wrapper untuk memposisikan paragraf dan stat di tengah sisa ruang -->
-                    <div class="flex-grow flex flex-col justify-center mt-6 lg:mt-12">
-                        <div class="space-y-6 text-gray-500 text-base lg:text-lg leading-relaxed">
-                            <p>
-                                Himpunan Mahasiswa Informatika (HMIF) Universitas Tanjungpura bukan sekadar
-                                organisasi, melainkan rumah bagi para pemimpin teknologi. Kami percaya bahwa
-                                pendidikan formal adalah fondasi, namun komunitas adalah akselerator.
-                            </p>
-                            <p>
-                                Melalui berbagai inisiatif, kami menjembatani kesenjangan antara kurikulum
-                                akademik dan kebutuhan industri, sambil tetap menjaga semangat kekeluargaan
-                                dan integritas ilmiah.
+                    <p class="text-gray-500 text-sm lg:text-base leading-relaxed">
+                        Himpunan Mahasiswa Informatika (HMIF) Universitas Tanjungpura bukan sekadar
+                        organisasi, melainkan rumah bagi para pemimpin teknologi. Kami percaya bahwa
+                        pendidikan formal adalah fondasi, namun komunitas adalah akselerator.
+                    </p>
+                    <p class="text-gray-500 text-sm lg:text-base leading-relaxed">
+                        Melalui berbagai inisiatif, kami menjembatani kesenjangan antara kurikulum
+                        akademik dan kebutuhan industri, sambil tetap menjaga semangat kekeluargaan
+                        dan integritas ilmiah.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex gap-24 pt-2">
+                        <div>
+                            <p class="text-4xl font-extrabold text-hmif-secondary">518</p>
+                            <p class="text-[10px] font-bold tracking-widest uppercase text-gray-400 mt-1">
+                                Mahasiswa Aktif
                             </p>
                         </div>
-
-                        <!-- Stats -->
-                        <div class="flex gap-16 lg:gap-24 mt-12 pt-4">
-                            <div>
-                                <p class="text-5xl lg:text-6xl font-extrabold text-hmif-secondary">518</p>
-                                <p class="text-xs font-bold tracking-widest uppercase text-gray-400 mt-3">
-                                    Mahasiswa Aktif
-                                </p>
-                            </div>
-                            <div>
-                                <p class="text-5xl lg:text-6xl font-extrabold text-hmif-secondary">8</p>
-                                <p class="text-xs font-bold tracking-widest uppercase text-gray-400 mt-3">
-                                    MITRA
-                                </p>
-                            </div>
+                        <div>
+                            <p class="text-4xl font-extrabold text-hmif-secondary">8</p>
+                            <p class="text-[10px] font-bold tracking-widest uppercase text-gray-400 mt-1">
+                                Partner Industri
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- ΓöÇΓöÇΓöÇ Right: Photo ΓöÇΓöÇΓöÇ -->
-                <div class="order-2 relative w-full h-[450px] lg:h-[600px] mx-auto lg:ml-auto lg:mr-0 mt-12 lg:mt-0 z-20">
+                <div class="order-2 relative w-full max-w-[460px] lg:max-w-[500px] mx-auto lg:ml-auto lg:mr-4 mt-8 lg:mt-0">
                     
-                    <!-- Solid Dark Blue Offset Block -->
-                    <div class="absolute top-4 left-4 lg:top-8 lg:left-8 w-[90%] sm:w-[85%] lg:w-[95%] h-full bg-hmif-primary rounded-3xl z-0 shadow-xl"></div>
+                    <!-- Offset Border (Bingkai) -->
+                    <div class="absolute top-4 left-4 lg:top-6 lg:left-6 w-full h-full border-[3px] border-hmif-primary rounded-xl z-0"></div>
                     
-                    <!-- Main Image (Cropped perfectly) -->
+                    <!-- Main Image (h-auto agar tidak crop, proporsional mengikuti lebar) -->
                     <img src="./assets/images/ruang-tumbuh/ruangtumbuh_foto.jpeg" alt="Ruang Tumbuh HMIF"
-                         class="absolute top-0 left-0 w-[90%] sm:w-[85%] lg:w-[95%] h-full object-cover rounded-3xl shadow-2xl z-10 bg-white" />
+                         class="relative w-full h-auto object-cover rounded-xl shadow-lg z-10 bg-white" />
 
                     <!-- Badge Inklusivitas & Kolaborasi -->
-                    <div class="absolute z-30 bottom-[-1rem] left-[-1rem] lg:bottom-[-1.5rem] lg:left-[-1.5rem]
+                    <div class="absolute z-30 bottom-0 left-0
                                 bg-hmif-secondary text-hmif-primary
-                                rounded-2xl px-5 py-4 text-center shadow-2xl" style="min-width: 150px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                            stroke="currentColor" class="w-7 h-7 mx-auto mb-2" aria-hidden="true">
+                                rounded-lg px-4 py-3 text-center shadow-lg" style="min-width: 130px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 mx-auto mb-1" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197m6.22-7.496a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6-3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-12 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                         </svg>
@@ -212,7 +206,6 @@
                             Inklusivitas &<br>Kolaborasi
                         </p>
                     </div>
-                </div>
 
                 </div>
             </div>
@@ -223,7 +216,7 @@
     <section id="partners" class="bg-white py-16">
         <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12">
             <h2 class="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-10">
-                Partner & Kolaborator
+                Partner dan Kolaborator
             </h2>
 
             <div class="flex flex-wrap gap-6 lg:gap-10 items-center">
@@ -773,31 +766,33 @@
                             <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
 
                                 <!-- Foto besar kiri (span 2 baris) -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
+
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/silaturahmi.png"
-                                        alt="Silaturahmi Keluarga Besar Informatika"
+                                    <img src=".\assets\images\galeri-keseruan\DSC00636.JPG"
+                                        alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png" alt="UPC 2025"
+                                    <img src=".\assets\images\galeri-keseruan\Copy of DSC09492.JPG" alt="Gemastik"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png" alt="Bootcamp HMIF"
+                                    <img src=".\assets\images\galeri-keseruan\IMG_0204.JPG" alt="INFORMERS"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah (span 2 kolom) -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png" alt="Ulang Tahun Informatika UNTAN"
+                                    <img src=".\assets\images\galeri-keseruan\DSC00456.JPG" alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
@@ -811,29 +806,28 @@
                                 <!-- Foto besar kiri -->
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png" alt="UPC 2025"
+                                    <img src=".\assets\images\galeri-keseruan\DSCF8922.JPG" alt="Ulang Tahun Informatika"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png" alt="Bootcamp HMIF"
+                                    <img src=".\assets\images\galeri-keseruan\DSC00091.JPG" alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
-                                    class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
+                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src="./assets/images/silaturahmi.png"
                                         alt="Silaturahmi Keluarga Besar Informatika"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png" alt="Ulang Tahun Informatika UNTAN"
+                                    <img src=".\assets\images\galeri-keseruan\IMG_5705.JPG" alt="INFORMERS"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
@@ -845,31 +839,31 @@
                             <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
 
                                 <!-- Foto besar kiri -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png" alt="Ulang Tahun Informatika UNTAN"
+                                    <img src=".\assets\images\galeri-keseruan\DSC00252.JPG" alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/silaturahmi.png"
-                                        alt="Silaturahmi Keluarga Besar Informatika"
+                                    <img src=".\assets\images\galeri-keseruan\DSC00519.JPG"
+                                        alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png" alt="UPC 2025"
+                                    <img src=".\assets\images\galeri-keseruan\IMG_0030.JPG" alt="INFORMERS"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah -->
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png" alt="Bootcamp HMIF"
+                                    <img src=".\assets\images\galeri-keseruan\DSC01002.JPG" alt="UPC V"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
