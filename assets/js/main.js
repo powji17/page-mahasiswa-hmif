@@ -55,8 +55,8 @@
         },
         'Mahasiswa Aktif': { id: 'Mahasiswa Aktif', en: 'Active Students' },
         'Partner Industri': { id: 'Partner Industri', en: 'Industry Partners' },
-        'Inklusivitas & Kolaborasi': { id: 'Inklusivitas &amp;<br>Kolaborasi', en: 'Inclusivity &amp;<br>Collaboration' },
-        'Partner & Kolaborator': { id: 'Partner &amp; Kolaborator', en: 'Partners & Collaborators' },
+        'Inklusivitas & Kolaborasi': { id: 'Inklusivitas &<br>Kolaborasi', en: 'Inclusivity &<br>Collaboration' },
+        'Partner & Kolaborator': { id: 'Partner & Kolaborator', en: 'Partners & Collaborators' },
         'Divisi Kepengurusan HMIF': { id: 'Divisi Kepengurusan HMIF', en: 'HMIF Management Divisions' },
         'Struktur organisasi yang dirancang untuk efisiensi dan pengembangan kapasitas anggota di berbagai bidang strategis.': {
             id: 'Struktur organisasi yang dirancang untuk efisiensi dan pengembangan kapasitas anggota di berbagai bidang strategis.',
