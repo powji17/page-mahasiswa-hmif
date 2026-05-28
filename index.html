@@ -152,7 +152,7 @@
                 <div class="flex flex-col order-1 lg:pr-12 h-full">
 
                     <!-- Heading tetap di atas -->
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-hmif-primary leading-tight mb-4 lg:mb-0">
+                    <h2 class="text-4xl lg:text-[44px] lg:leading-[1.2] font-extrabold text-hmif-primary mb-4 lg:mb-0">
                         Ruang Tumbuh Bagi<br class="hidden sm:block"> Mahasiswa Informatika
                     </h2>
 
@@ -174,14 +174,14 @@
                         <!-- Stats -->
                         <div class="flex gap-16 lg:gap-24 mt-12 pt-4">
                             <div>
-                                <p class="text-5xl lg:text-6xl font-extrabold text-hmif-secondary">518</p>
-                                <p class="text-xs font-bold tracking-widest uppercase text-gray-400 mt-3">
+                                <p class="text-6xl lg:text-[80px] font-extrabold text-hmif-secondary leading-none">518</p>
+                                <p class="text-sm font-bold tracking-widest uppercase text-gray-400 mt-4">
                                     Mahasiswa Aktif
                                 </p>
                             </div>
                             <div>
-                                <p class="text-5xl lg:text-6xl font-extrabold text-hmif-secondary">8</p>
-                                <p class="text-xs font-bold tracking-widest uppercase text-gray-400 mt-3">
+                                <p class="text-6xl lg:text-[80px] font-extrabold text-hmif-secondary leading-none">8</p>
+                                <p class="text-sm font-bold tracking-widest uppercase text-gray-400 mt-4">
                                     MITRA
                                 </p>
                             </div>
@@ -190,17 +190,18 @@
                 </div>
 
                 <!-- ΓöÇΓöÇΓöÇ Right: Photo ΓöÇΓöÇΓöÇ -->
-                <div class="order-2 relative w-full h-[450px] lg:h-[600px] mx-auto lg:ml-auto lg:mr-0 mt-12 lg:mt-0 z-20">
+                <!-- Menggunakan aspect-[4/5] agar proporsi gambar terkunci dan tersinkronisasi saat zoom in/out -->
+                <div class="order-2 relative w-full max-w-[500px] lg:max-w-[550px] aspect-[4/5] mx-auto lg:ml-auto lg:mr-8 mt-12 lg:mt-0 z-20">
                     
                     <!-- Solid Dark Blue Offset Block -->
-                    <div class="absolute top-4 left-4 lg:top-8 lg:left-8 w-[90%] sm:w-[85%] lg:w-[95%] h-full bg-hmif-primary rounded-3xl z-0 shadow-xl"></div>
+                    <div class="absolute top-4 left-4 lg:top-8 lg:left-8 w-full h-full bg-hmif-primary rounded-3xl z-0 shadow-xl"></div>
                     
-                    <!-- Main Image (Cropped perfectly) -->
+                    <!-- Main Image -->
                     <img src="./assets/images/ruang-tumbuh/ruangtumbuh_foto.jpeg" alt="Ruang Tumbuh HMIF"
-                         class="absolute top-0 left-0 w-[90%] sm:w-[85%] lg:w-[95%] h-full object-cover rounded-3xl shadow-2xl z-10 bg-white" />
+                         class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl z-10 bg-white" />
 
                     <!-- Badge Inklusivitas & Kolaborasi -->
-                    <div class="absolute z-30 bottom-[-1rem] left-[-1rem] lg:bottom-[-1.5rem] lg:left-[-1.5rem]
+                    <div class="absolute z-30 bottom-[-1rem] left-[-1rem] lg:bottom-[-2rem] lg:left-[-2rem]
                                 bg-hmif-secondary text-hmif-primary
                                 rounded-2xl px-5 py-4 text-center shadow-2xl" style="min-width: 150px;">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
