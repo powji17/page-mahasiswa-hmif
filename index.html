@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,103 @@
     <link href="./assets/css/output.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Hero Section -->
-    <header class="relative w-full min-h-screen flex items-center overflow-hidden">
+<body class="bg-[#EEF2FC] text-slate-800">
+    <!-- Header -->
+    <div id="site-header" class="fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="bg-hmif-primary text-white border-b border-white/10">
+            <div
+                class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 lg:px-6 py-3 lg:py-4 flex items-center justify-between">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/id/0/03/Lambang_Universitas_Tanjungpura.png"
+                        alt="Logo Universitas Tanjungpura" class="w-9 h-9 lg:w-11 lg:h-11 object-contain" />
+                    <div class="border-l border-white/25 pl-3 leading-tight">
+                        <p class="text-sm lg:text-xl font-bold tracking-widest uppercase text-white">INFORMATIKA</p>
+                        <p class="text-[9px] lg:text-[11px] tracking-[0.2em] uppercase text-slate-200">UNIVERSITAS
+                            TANJUNGPURA</p>
+                    </div>
+                </a>
 
-        <img id="api-hero-bg" src="https://placehold.co/1920x1080/cccccc/999999?text=Foto+Background+Mahasiswa"
+                <div class="hidden lg:flex items-center gap-5 text-[11px] tracking-wide uppercase">
+                    <a href="https://satu.untan.ac.id" target="_blank" rel="noopener noreferrer"
+                        class="font-semibold hover:text-hmif-secondary transition-colors">SATU UNTAN</a>
+                    <div class="h-5 w-px bg-white/20"></div>
+                    <button id="language-toggle" data-language-toggle type="button"
+                        class="hover:text-hmif-secondary transition-colors" aria-label="Ganti bahasa"
+                        aria-pressed="false">ID | EN</button>
+                    <button class="w-7 h-7 rounded hover:bg-white/10 transition-colors" aria-label="Aksesibilitas">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-4 h-4 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 4.5m-1.5 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0-3 0M9 21l3-6 3 6M6 9.75h12M12 6v9" />
+                        </svg>
+                    </button>
+                    <button class="w-7 h-7 rounded hover:bg-white/10 transition-colors" aria-label="Cari">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-4 h-4 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-4.35-4.35m0 0A7.5 7.5 0 1 0 6 6a7.5 7.5 0 0 0 10.65 10.65Z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <button id="mobile-menu-button"
+                    class="lg:hidden text-white w-9 h-9 inline-flex items-center justify-center rounded hover:bg-white/10 transition-colors"
+                    aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <nav class="hidden lg:block bg-hmif-secondary border-t border-white/30 shadow-md">
+            <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6">
+                <ul class="flex items-center justify-center gap-1 py-2">
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">ABOUT
+                            US</a></li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">PROGRAMS</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">HUMAN
+                            RESOURCES</a></li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">FACILITIES</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">WORKS
+                            &amp; EVENTS</a></li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800 hover:text-hmif-primary transition-colors">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="lg:hidden hidden bg-hmif-secondary border-t border-white/30 shadow-md">
+            <div class="px-4 py-3 grid grid-cols-1 gap-1">
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">ABOUT US</a>
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">PROGRAMS</a>
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">HUMAN
+                    RESOURCES</a>
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">FACILITIES</a>
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">WORKS &amp;
+                    EVENTS</a>
+                <a href="#" class="py-2 text-[11px] font-bold uppercase tracking-wide text-slate-800">CONTACT</a>
+                <button data-language-toggle type="button"
+                    class="py-2 text-left text-[11px] font-bold uppercase tracking-wide text-slate-800"
+                    aria-label="Ganti bahasa" aria-pressed="false">ID | EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative w-full min-h-screen flex items-center overflow-hidden pt-[92px] lg:pt-[118px]">
+
+        <img id="api-hero-bg" src="./assets/images/bg-kehidupan-mahasiswa.png"
             alt="Foto Kegiatan Mahasiswa" class="absolute inset-0 w-full h-full object-cover z-0" />
 
         <div class="absolute inset-0 bg-gradient-to-r from-hmif-primary via-hmif-primary/80 to-transparent z-0"></div>
@@ -39,7 +131,7 @@
                     </p>
 
                     <button
-                        class="mt-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base px-6 py-3 rounded-md hover:bg-hmif-secondary hover:text-hmif-primary hover:border-hmif-secondary transition-all">
+                        class="mt-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base px-6 py-3 rounded-md hover:bg-hmif-secondary hover:text-hmif-primary hover:border-hmif-secondary transition-all hover:cursor-pointer">
                         Lihat Struktur Kepengurusan
                     </button>
 
@@ -77,13 +169,13 @@
                     <!-- Stats -->
                     <div class="flex gap-24 pt-2">
                         <div>
-                            <p class="text-4xl font-extrabold text-hmif-secondary">500+</p>
+                            <p class="text-4xl font-extrabold text-hmif-secondary">518</p>
                             <p class="text-[10px] font-bold tracking-widest uppercase text-gray-400 mt-1">
                                 Mahasiswa Aktif
                             </p>
                         </div>
                         <div>
-                            <p class="text-4xl font-extrabold text-hmif-secondary">12+</p>
+                            <p class="text-4xl font-extrabold text-hmif-secondary">8</p>
                             <p class="text-[10px] font-bold tracking-widest uppercase text-gray-400 mt-1">
                                 Partner Industri
                             </p>
@@ -92,21 +184,26 @@
                 </div>
 
                 <!-- ΓöÇΓöÇΓöÇ Right: Photo ΓöÇΓöÇΓöÇ -->
-                <div class="order-2 relative w-full h-[420px] lg:h-[460px]">
-
-                    <div class="absolute top-0 left-10 lg:right-0
-                                w-[85%] sm:w-[78%] lg:w-[88%]
-                                h-[380px] lg:h-[420px]
-                                border-[3px] border-hmif-primary rounded-xl z-0">
-                    </div>
+                <div class="order-2 relative w-full max-w-[460px] lg:max-w-[500px] mx-auto lg:ml-auto lg:mr-4 mt-8 lg:mt-0">
+                    
+                    <!-- Offset Border (Bingkai) -->
+                    <div class="absolute top-4 left-4 lg:top-6 lg:left-6 w-full h-full border-[3px] border-hmif-primary rounded-xl z-0"></div>
+                    
+                    <!-- Main Image (h-auto agar tidak crop, proporsional mengikuti lebar) -->
+                    <img src="./assets/images/ruang-tumbuh/ruangtumbuh_foto.jpeg" alt="Ruang Tumbuh HMIF"
+                         class="relative w-full h-auto object-cover rounded-xl shadow-lg z-10 bg-white" />
 
                     <!-- Badge Inklusivitas & Kolaborasi -->
                     <div class="absolute z-30 bottom-0 left-0
                                 bg-hmif-secondary text-hmif-primary
                                 rounded-lg px-4 py-3 text-center shadow-lg" style="min-width: 130px;">
-                        <span class="text-xl block mb-1">≡ƒæÑ</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 mx-auto mb-1" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197m6.22-7.496a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6-3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-12 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                        </svg>
                         <p class="text-xs font-bold leading-snug">
-                            Inklusivitas &amp;<br>Kolaborasi
+                            Inklusivitas &<br>Kolaborasi
                         </p>
                     </div>
 
@@ -119,58 +216,50 @@
     <section id="partners" class="bg-white py-16">
         <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12">
             <h2 class="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-10">
-<<<<<<< Updated upstream
-                Partner &amp; Kolaborator
-=======
                 Partner dan Kolaborator
->>>>>>> Stashed changes
             </h2>
 
             <div class="flex flex-wrap gap-6 lg:gap-10 items-center">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 1">
-                    <img src="https://placehold.co/60/2d2d2d/fff?text=P1" alt="Partner 1" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
+                <!-- Partner Aktif (Terbaru) -->
+                <a href="https://www.instagram.com/namakucoffee.id?igsh=MXYyMnI3ZTNmMGxtZQ==" target="_blank"
+                    rel="noopener noreferrer" aria-label="Partner Aktif - Namaku">
+                    <img src="./assets/images/ruang-tumbuh/partner/namaku.jpeg" alt="Namaku" class="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover shadow-lg border-4 border-hmif-secondary
+                                hover:scale-110 transition-transform duration-200 cursor-pointer"
+                        title="Partner Terbaru" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 2">
-                    <img src="https://placehold.co/60/f5c518/1b2a4a?text=P2" alt="Partner 2" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
+                <!-- Partner Aktif (Sobat Konveksi) -->
+                <a href="https://www.instagram.com/sobat.konveksi?igsh=OWxkZGJtMjhjeDZj" target="_blank"
+                    rel="noopener noreferrer" aria-label="Partner Aktif - Sobat Konveksi">
+                    <img src="./assets/images/ruang-tumbuh/partner/sobatkonveksi.jpeg" alt="Sobat Konveksi" class="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover shadow-lg border-4 border-hmif-secondary
+                                hover:scale-110 transition-transform duration-200 cursor-pointer"
+                        title="Partner Aktif" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 3">
-                    <img src="https://placehold.co/60/e74c3c/fff?text=P3" alt="Partner 3" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 4">
-                    <img src="https://placehold.co/60/27ae60/fff?text=P4" alt="Partner 4" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 5">
-                    <img src="https://placehold.co/60/8e44ad/fff?text=P5" alt="Partner 5" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 6">
-                    <img src="https://placehold.co/60/2980b9/fff?text=P6" alt="Partner 6" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 7">
-                    <img src="https://placehold.co/60/c0392b/fff?text=P7" alt="Partner 7" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 8">
-                    <img src="https://placehold.co/60/16a085/fff?text=P8" alt="Partner 8" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 9">
-                    <img src="https://placehold.co/60/d35400/fff?text=P9" alt="Partner 9" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 10">
-                    <img src="https://placehold.co/60/1b2a4a/fff?text=P10" alt="Partner 10" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Partner 11">
-                    <img src="https://placehold.co/60/7f8c8d/fff?text=P11" alt="Partner 11" class="w-14 h-14 rounded-full object-cover shadow-md
-                                hover:scale-110 hover:shadow-lg transition-transform duration-200 cursor-pointer" />
-                </a>
+
+                <!-- Partner Lainnya (Legacy) - Tidak bisa diklik, hover ganti warna -->
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/ayanimegamall.jpeg" alt="Ayani Megamall" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/indofood.jpeg" alt="Indofood" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/playhera.jpeg" alt="Playhera" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/pln.jpeg" alt="PLN" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/rtech.jpeg" alt="RTech" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
+                <div class="relative group">
+                    <img src="./assets/images/ruang-tumbuh/partner/rumangsa.jpeg" alt="Rumangsa" class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md grayscale hover:grayscale-0
+                                hover:scale-110 hover:shadow-lg transition-all duration-300" />
+                </div>
             </div>
         </div>
     </section>
@@ -191,112 +280,117 @@
 
             <!-- Grid Card Container -->
             <div
-                class="border border-white/10 rounded-2xl bg-white/[0.01] backdrop-blur-md grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 overflow-hidden">
-                <!-- Column 1: Bidang 1 & Bidang 4 -->
-                <div class="flex flex-col justify-between p-8 lg:p-10 space-y-12">
-                    <!-- Bidang 1 -->
-                    <div class="group flex flex-col space-y-3 cursor-pointer">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 1
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Pengembangan Sumber Daya Mahasiswa dan Kaderisasi
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Mendukung mahasiswa untuk terus berkembang, dengan pembinaan dan kaderisasi yang
-                            berkelanjutan.
-                        </p>
-                    </div>
-
-                    <!-- Bidang 4 -->
-                    <div
-                        class="group flex flex-col space-y-3 cursor-pointer pt-12 border-t border-white/5 md:border-t-0 md:pt-0">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 4
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Pengembangan Organisasi
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Mendukung organisasi agar berjalan lebih rapi, terstruktur, dan semakin berkembang.
-                        </p>
-                    </div>
+                class="border border-white/10 rounded-2xl bg-white/[0.01] backdrop-blur-md grid grid-cols-1 md:grid-cols-3 overflow-hidden">
+                <!-- Bidang 1 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 1
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Pengembangan Sumber Daya Mahasiswa dan Kaderisasi
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini menyelenggarakan kaderisasi terstruktur, mentoring berkala, dan pelatihan
+                        kepemimpinan serta soft-skill. Program kerja mencakup onboarding anggota baru,
+                        workshop kepemimpinan, proyek kolaboratif, dan kegiatan pengabdian yang melatih
+                        tanggung jawab sosial. Fokusnya adalah menyiapkan kader yang kompeten dan
+                        menjaga regenerasi organisasi.
+                    </p>
                 </div>
 
-                <!-- Column 2: Bidang 2 & Bidang 5 -->
-                <div class="flex flex-col justify-between p-8 lg:p-10 space-y-12">
-                    <!-- Bidang 2 -->
-                    <div class="group flex flex-col space-y-3 cursor-pointer">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 2
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Media Komunikasi dan Konten Digital
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Mengelola media dan komunikasi digital untuk menyampaikan informasi dengan lebih menarik dan
-                            mudah diakses.
-                        </p>
-                    </div>
-
-                    <!-- Bidang 5 -->
-                    <div
-                        class="group flex flex-col space-y-3 cursor-pointer pt-12 border-t border-white/5 md:border-t-0 md:pt-0">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 5
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Sosial Masyarakat
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Berbagi dan berkontribusi melalui berbagai kegiatan sosial, sekaligus membawa dampak positif
-                            bagi masyarakat.
-                        </p>
-                    </div>
+                <!-- Bidang 2 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 2
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Media Komunikasi dan Konten Digital
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini mengelola strategi komunikasi dan produksi konten HMIF, termasuk
+                        perencanaan editorial, manajemen media sosial, serta dokumentasi acara. Program
+                        kerjanya meliputi pembuatan materi promosi, publikasi kegiatan, dan penguatan
+                        identitas digital agar informasi organisasi tersampaikan konsisten dan menarik.
+                    </p>
                 </div>
 
-                <!-- Column 3: Bidang 3 & Bidang 6 -->
-                <div class="flex flex-col justify-between p-8 lg:p-10 space-y-12">
-                    <!-- Bidang 3 -->
-                    <div class="group flex flex-col space-y-3 cursor-pointer">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 3
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Inovasi dan Kompetisi Teknologi
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Mengembangkan inovasi dan skill teknologi, sambil mendorong mahasiswa untuk berani mencoba
-                            dan ikut berbagai tantangan.
-                        </p>
-                    </div>
+                <!-- Bidang 3 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 3
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Inovasi dan Kompetisi Teknologi
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini memfasilitasi persiapan lomba dan pengembangan proyek teknis melalui
+                        coaching clinic, bootcamp berbasis proyek, serta study club untuk Competitive
+                        Programming, Software Development, dan Data/ML. Kegiatan termasuk seleksi internal,
+                        bimbingan kompetitif, dan inisiatif digitalisasi seperti pengembangan website
+                        dan dashboard untuk mendukung ekosistem inovasi HMIF.
+                    </p>
+                </div>
 
-                    <!-- Bidang 6 -->
-                    <div
-                        class="group flex flex-col space-y-3 cursor-pointer pt-12 border-t border-white/5 md:border-t-0 md:pt-0">
-                        <span
-                            class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
-                            Bidang 6
-                        </span>
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
-                            Kewirausahaan dan Kemitraan
-                        </h3>
-                        <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                            Mengembangkan jiwa kewirausahaan, sekaligus membangun kolaborasi dan membuka peluang bersama
-                            berbagai mitra.
-                        </p>
-                    </div>
+                <!-- Bidang 4 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 4
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Pengembangan Organisasi
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini memperkuat tata kelola dan kapabilitas internal melalui pelatihan
+                        pengurus, penyusunan SOP sederhana, dan evaluasi proses kerja. Program kerjanya
+                        mencakup pengembangan budaya organisasi, peningkatan efektivitas koordinasi, dan
+                        kegiatan peningkatan profesionalisme sehingga operasi HMIF menjadi lebih terstruktur
+                        dan efisien.
+                    </p>
+                </div>
+
+                <!-- Bidang 5 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 5
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Sosial Masyarakat
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini merancang dan melaksanakan program pengabdian serta aksi sosial yang
+                        berdampak, termasuk pendampingan komunitas dan bantuan kemanusiaan. Kegiatan
+                        meliputi identifikasi kebutuhan lapangan, pelaksanaan terstruktur, dan evaluasi
+                        dampak untuk memastikan keberlanjutan dan manfaat nyata bagi masyarakat.
+                    </p>
+                </div>
+
+                <!-- Bidang 6 -->
+                <div class="group flex flex-col space-y-3 cursor-pointer p-8 lg:p-10">
+                    <span
+                        class="text-hmif-secondary font-bold text-xs md:text-sm tracking-wider uppercase transition-colors duration-300 group-hover:text-amber-300">
+                        Bidang 6
+                    </span>
+                    <h3
+                        class="text-xl md:text-2xl font-bold text-white leading-snug transition-colors duration-300 group-hover:text-hmif-secondary">
+                        Kewirausahaan dan Kemitraan
+                    </h3>
+                    <p class="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                        Divisi ini mengembangkan unit usaha organisasi, merancang skema pendanaan kreatif,
+                        dan menjalin kemitraan strategis untuk mendukung keberlanjutan program HMIF. Unit
+                        kerjanya meliputi riset peluang usaha, penyusunan proposal kemitraan, dan
+                        pengelolaan sponsor untuk meningkatkan kemandirian finansial dan akses jaringan
+                        profesional.
+                    </p>
                 </div>
             </div>
         </div>
@@ -329,48 +423,23 @@
 
                 <!-- Viewport / Overflow Wrapper -->
                 <div class="overflow-hidden w-full" id="slider-viewport">
-                    <!-- Track ΓÇö holds all cards in a single row -->
+                    <!-- Track holds all cards in a single row -->
                     <div id="slider-track" class="flex gap-8 transition-transform duration-500 ease-in-out">
 
-                        <!-- Card 1 ΓÇö UPC 2025 -->
+                        <!-- Card 1 Silaturahmi Keluarga Besar Informatika-->
                         <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
                             style="width: calc(50% - 16px);">
                             <div
                                 class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
-                                <img src="./assets/images/upc_2025.png" alt="UPC 2025"
+                                <img src="./assets/images/kegiatan-unggulan/SKBI.jpeg" alt="Silaturahmi Keluarga Besar"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div class="flex items-start gap-4 mt-6">
                                 <div
                                     class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
-                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">12</span>
+                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">27</span>
                                     <span
-                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Nov</span>
-                                </div>
-                                <div class="space-y-1">
-                                    <h3
-                                        class="text-lg font-bold text-slate-800 group-hover:text-hmif-primary transition-colors">
-                                        UPC 2025</h3>
-                                    <p class="text-sm text-gray-500 leading-relaxed font-light">Kompetisi Coding untuk
-                                        mengasah skill coding mahasiswa Informatika.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 ΓÇö Silaturahmi Keluarga Besar -->
-                        <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
-                            style="width: calc(50% - 16px);">
-                            <div
-                                class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
-                                <img src="./assets/images/silaturahmi.png" alt="Silaturahmi Keluarga Besar"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                            </div>
-                            <div class="flex items-start gap-4 mt-6">
-                                <div
-                                    class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
-                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">25</span>
-                                    <span
-                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Mar</span>
+                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Feb</span>
                                 </div>
                                 <div class="space-y-1">
                                     <h3
@@ -382,44 +451,47 @@
                             </div>
                         </div>
 
-                        <!-- Card 3 ΓÇö Ultah Informatika -->
+                        <!-- Card 2 Gemastik -->
                         <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
                             style="width: calc(50% - 16px);">
                             <div
                                 class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
-                                <img src="./assets/images/ultah_informatika.png" alt="Ultah Informatika"
+                                <img src="./assets/images/kegiatan-unggulan/gemastik.jpg" alt="Bootcamp HMIF"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div class="flex items-start gap-4 mt-6">
                                 <div
                                     class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
-                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">7</span>
+                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">1</span>
                                     <span
-                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Okt</span>
+                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Jul</span>
                                 </div>
                                 <div class="space-y-1">
                                     <h3
                                         class="text-lg font-bold text-slate-800 group-hover:text-hmif-primary transition-colors">
-                                        Ultah Informatika</h3>
-                                    <p class="text-sm text-gray-500 leading-relaxed font-light">Perayaan ulang tahun
-                                        Informatika UNTAN, momen kebersamaan dan kebanggaan seluruh keluarga besar
-                                        Informatika.</p>
+                                        GEMASTIK</h3>
+                                    <p class="text-sm text-gray-500 leading-relaxed font-light">Program intensif
+                                        GEMASTIK adalah kompetisi IT tahunan tingkat nasional yang mempertemukan
+                                        mahasiswa se-Indonesia. Lomba ini fokus pada pemecahan masalah lewat teknologi,
+                                        dengan cabang yang beragam seperti <em>programming</em>, <em>cyber
+                                            security</em>, <em>data mining</em>, sampai pengembangan UI/UX.</p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 4 ΓÇö Bootcamp -->
+                        <!-- Card 3 Bootcamp -->
                         <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
                             style="width: calc(50% - 16px);">
                             <div
                                 class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
-                                <img src="./assets/images/bootcamp.png" alt="Bootcamp HMIF"
+                                <img src="./assets/images/kegiatan-unggulan/bootcamp.jpeg" alt="Bootcamp HMIF"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <div class="flex items-start gap-4 mt-6">
                                 <div
                                     class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
-                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">15</span>
+                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">28</span>
                                     <span
                                         class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Agu</span>
                                 </div>
@@ -430,6 +502,56 @@
                                     <p class="text-sm text-gray-500 leading-relaxed font-light">Program intensif
                                         pengembangan skill teknis mahasiswa Informatika bersama mentor profesional dari
                                         industri.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 UPC 2025 -->
+                        <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
+                            style="width: calc(50% - 16px);">
+                            <div
+                                class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
+                                <img src="./assets/images/kegiatan-unggulan/upc.JPG" alt="UPC 2025"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex items-start gap-4 mt-6">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
+                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">13</span>
+                                    <span
+                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Sep</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h3
+                                        class="text-lg font-bold text-slate-800 group-hover:text-hmif-primary transition-colors">
+                                        UPC VI</h3>
+                                    <p class="text-sm text-gray-500 leading-relaxed font-light">Kompetisi Coding untuk
+                                        mengasah skill coding mahasiswa Informatika.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 Informers -->
+                        <div class="group flex-shrink-0 bg-white rounded-2xl overflow-hidden transition-all duration-300"
+                            style="width: calc(50% - 16px);">
+                            <div
+                                class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-gray-100">
+                                <img src="./assets/images/kegiatan-unggulan/informers.JPG" alt="Ultah Informatika"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div class="flex items-start gap-4 mt-6">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-hmif-secondary rounded-xl flex flex-col items-center justify-center text-center p-2 shadow-sm">
+                                    <span class="text-lg font-extrabold text-hmif-primary leading-none">25</span>
+                                    <span
+                                        class="text-[8px] font-bold text-hmif-primary uppercase tracking-wider mt-0.5">Okt</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h3
+                                        class="text-lg font-bold text-slate-800 group-hover:text-hmif-primary transition-colors">
+                                        INFORMERS</h3>
+                                    <p class="text-sm text-gray-500 leading-relaxed font-light">Perayaan ulang tahun
+                                        Informatika UNTAN, momen kebersamaan dan kebanggaan seluruh keluarga besar
+                                        Informatika.</p>
                                 </div>
                             </div>
                         </div>
@@ -454,6 +576,10 @@
                     data-index="0" aria-label="Slide 1"></button>
                 <button class="slider-dot h-2.5 rounded-full bg-gray-200 transition-all duration-300 w-2.5"
                     data-index="1" aria-label="Slide 2"></button>
+                <button class="slider-dot h-2.5 rounded-full bg-gray-200 transition-all duration-300 w-2.5"
+                    data-index="2" aria-label="Slide 3"></button>
+                <button class="slider-dot h-2.5 rounded-full bg-gray-200 transition-all duration-300 w-2.5"
+                    data-index="3" aria-label="Slide 4"></button>
             </div>
         </div>
     </section>
@@ -461,7 +587,7 @@
     <script>
         (function () {
             var CARDS_VISIBLE = 2;
-            var TOTAL_CARDS = 4;
+            var TOTAL_CARDS = 5;
             var SLIDE_STEPS = TOTAL_CARDS - CARDS_VISIBLE; // 2 slide positions (index 0 and 1)
             var AUTO_DELAY_MS = 2000;
 
@@ -543,7 +669,7 @@
                     </div>
                     <div class="space-y-3">
                         <h3 class="text-lg font-bold text-hmif-primary">
-                            Competitive Programming
+                            ARISE
                         </h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">
                             Belajar logika dan algoritma bersama, di mana kalian bisa berkembang dan membuka peluang
@@ -552,29 +678,7 @@
                     </div>
                 </div>
 
-                <!-- Web Dev Card -->
-                <div
-                    class="bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/50 transition-all duration-300 flex flex-col space-y-6">
-                    <div class="text-[#b48608]">
-                        <!-- Layout Dashboard Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h12A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6ZM6 7.5h12v-1.5H6v1.5Zm0 4.5h6v-1.5H6v1.5Zm0 4.5h6v-1.5H6v1.5Zm9-4.5h3v-1.5h-3v1.5Zm0 4.5h3v-1.5h-3v1.5Z" />
-                        </svg>
-                    </div>
-                    <div class="space-y-3">
-                        <h3 class="text-lg font-bold text-hmif-primary">
-                            Web Development
-                        </h3>
-                        <p class="text-sm text-gray-500 leading-relaxed font-light">
-                            Di sini, kalian bisa belajar membuat website dan aplikasi web, sekaligus mengembangkan ide
-                            menjadi sesuatu yang nyata.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Cyber Security Card -->
+                <!-- Data Mining Card -->
                 <div
                     class="bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/50 transition-all duration-300 flex flex-col space-y-6">
                     <div class="text-[#b48608]">
@@ -582,16 +686,39 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
                         </svg>
                     </div>
                     <div class="space-y-3">
                         <h3 class="text-lg font-bold text-hmif-primary">
-                            Cyber Security
+                            MINERVA
                         </h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">
-                            Belajar memahami sistem dan cara menjaganya, supaya lebih siap menghadapi berbagai ancaman
-                            digital.
+                            Gali potensi tersembunyi dari tumpukan data! Di sini kita akan bereksplorasi dengan
+                            algoritma <em>Machine Learning</em>, membedah teknik klasifikasi, hingga melatih model
+                            prediktif untuk menghasilkan <em>insight</em> yang bermakna.
+                        </p>
+                    </div>
+                </div>
+                <!-- Software Development Card -->
+                <div
+                    class="bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-md border border-gray-100/50 transition-all duration-300 flex flex-col space-y-6">
+                    <div class="text-[#b48608]">
+                        <!-- Layout Dashboard Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-bold text-hmif-primary">
+                            Software Development (Soon)
+                        </h3>
+                        <p class="text-sm text-gray-500 leading-relaxed font-light">
+                            Wujudkan idemu jadi produk digital yang nyata! Kita akan ngoding bareng dari merancang
+                            <em>frontend</em> yang interaktif, membangun <em>backend</em> yang tangguh, serta
+                            mengintegrasikan berbagai API untuk menciptakan aplikasi web masa kini.
                         </p>
                     </div>
                 </div>
@@ -619,8 +746,7 @@
             <div class="relative">
 
                 <!-- Left Arrow Button -->
-                <button id="galeri-prev"
-                    style="top: 50%; transform: translateY(-50%);"
+                <button id="galeri-prev" style="top: 50%; transform: translateY(-50%);"
                     class="absolute -left-4 lg:-left-12 z-10 w-11 h-11 bg-white border border-gray-200 hover:border-hmif-primary rounded-full flex items-center justify-center shadow-md hover:shadow-lg text-slate-600 hover:text-hmif-primary transition-all cursor-pointer"
                     aria-label="Sebelumnya">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
@@ -640,55 +766,33 @@
                             <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
 
                                 <!-- Foto besar kiri (span 2 baris) -->
-<<<<<<< Updated upstream
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/silaturahmi.png"
-                                        alt="Silaturahmi Keluarga Besar Informatika"
-=======
+
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC00636.JPG"
                                         alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png"
-                                        alt="UPC 2025"
-=======
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\Copy of DSC09492.JPG" alt="Gemastik"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png"
-                                        alt="Bootcamp HMIF"
-=======
                                 <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\IMG_0204.JPG" alt="INFORMERS"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah (span 2 kolom) -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png"
-                                        alt="Ulang Tahun Informatika UNTAN"
-=======
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC00456.JPG" alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
@@ -700,55 +804,30 @@
                             <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
 
                                 <!-- Foto besar kiri -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png"
-                                        alt="UPC 2025"
-=======
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSCF8922.JPG" alt="Ulang Tahun Informatika"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png"
-                                        alt="Bootcamp HMIF"
-=======
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC00091.JPG" alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-<<<<<<< Updated upstream
                                 <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src="./assets/images/silaturahmi.png"
                                         alt="Silaturahmi Keluarga Besar Informatika"
-=======
-                                <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
-                                    class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src=".\assets\images\galeri-keseruan\DSC03316.JPG"
-                                        alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png"
-                                        alt="Ulang Tahun Informatika UNTAN"
-=======
                                 <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\IMG_5705.JPG" alt="INFORMERS"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
@@ -760,55 +839,31 @@
                             <div class="grid grid-cols-3 grid-rows-2 gap-4 h-[420px] lg:h-[500px]">
 
                                 <!-- Foto besar kiri -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/ultah_informatika.png"
-                                        alt="Ulang Tahun Informatika UNTAN"
-=======
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-2 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC00252.JPG" alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 1 -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/silaturahmi.png"
-                                        alt="Silaturahmi Keluarga Besar Informatika"
-=======
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC00519.JPG"
                                         alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto kecil kanan atas 2 -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/upc_2025.png"
-                                        alt="UPC 2025"
-=======
                                 <a href="https://www.instagram.com/informershmif?igsh=MW5odm9pbXN2aThlMA==" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-1 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\IMG_0030.JPG" alt="INFORMERS"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
                                 <!-- Foto lebar kanan bawah -->
-<<<<<<< Updated upstream
-                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer" class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
-                                    <img src="./assets/images/bootcamp.png"
-                                        alt="Bootcamp HMIF"
-=======
                                 <a href="https://www.instagram.com/upc.untan?igsh=ZWYzcTh0d2J4MmJx" target="_blank" rel="noopener noreferrer"
                                     class="block col-span-2 row-span-1 overflow-hidden rounded-xl group cursor-pointer">
                                     <img src=".\assets\images\galeri-keseruan\DSC01002.JPG" alt="UPC V"
->>>>>>> Stashed changes
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 </a>
 
@@ -819,8 +874,7 @@
                 </div><!-- end galeri-viewport -->
 
                 <!-- Right Arrow Button -->
-                <button id="galeri-next"
-                    style="top: 50%; transform: translateY(-50%);"
+                <button id="galeri-next" style="top: 50%; transform: translateY(-50%);"
                     class="absolute -right-4 lg:-right-12 z-10 w-11 h-11 bg-white border border-gray-200 hover:border-hmif-primary rounded-full flex items-center justify-center shadow-md hover:shadow-lg text-slate-600 hover:text-hmif-primary transition-all cursor-pointer"
                     aria-label="Berikutnya">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
@@ -843,6 +897,169 @@
 
         </div>
     </section>
+
+    <!-- CTA Section -->
+    <section id="contact-cta" class="bg-[#EEF2FC] py-16 lg:py-20">
+        <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div
+                class="relative overflow-hidden rounded-[24px] bg-[#082A4B] px-5 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-14 shadow-[0_24px_70px_rgba(4,17,31,0.32)]">
+
+                <div class="absolute -top-20 -left-16 h-48 w-48 rounded-full bg-white/10 blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-20 h-56 w-56 rounded-full bg-hmif-secondary/15 blur-3xl"></div>
+                <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/5 to-transparent"></div>
+
+                <div class="relative z-10">
+                    <div class="mx-auto max-w-4xl text-center">
+                        <h2 class="text-2xl sm:text-3xl lg:text-[38px] font-bold leading-tight text-white">
+                            Ada yang Ingin Ditanyakan Seputar HMIF?
+                        </h2>
+
+                        <p
+                            class="mx-auto mt-4 max-w-2xl text-xs sm:text-sm lg:text-[15px] leading-relaxed text-white/72">
+                            Bergabunglah dengan HMIF untuk memperluas jaringan, mengasah skill, dan
+                            menciptakan dampak nyata.
+                        </p>
+
+                        <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                            <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center rounded-lg bg-hmif-secondary px-6 py-3 text-sm font-bold text-hmif-primary shadow-[0_10px_24px_rgba(245,200,47,0.35)] transition-transform duration-200 hover:-translate-y-0.5">
+                                Hubungi Kami
+                            </a>
+
+                            <div class="flex items-center justify-center gap-3">
+                                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/10 text-white transition-colors duration-200 hover:bg-white/15"
+                                    aria-label="Instagram HMIF">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="h-4.5 w-4.5">
+                                        <path
+                                            d="M7.5 2A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9a5.5 5.5 0 0 0 5.5-5.5v-9A5.5 5.5 0 0 0 16.5 2h-9Zm9 1.5A4 4 0 0 1 20.5 7.5v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4h9Zm-4.5 2.25a5.75 5.75 0 1 0 0 11.5 5.75 5.75 0 0 0 0-11.5Zm0 2a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5Zm5.9-.95a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6Z" />
+                                    </svg>
+                                </a>
+
+                                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/10 text-white transition-colors duration-200 hover:bg-white/15"
+                                    aria-label="YouTube HMIF">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="h-4.5 w-4.5">
+                                        <path
+                                            d="M21.6 7.2a2.9 2.9 0 0 0-2.04-2.05C17.77 4.7 12 4.7 12 4.7s-5.77 0-7.56.45A2.9 2.9 0 0 0 2.4 7.2 30.3 30.3 0 0 0 2 12a30.3 30.3 0 0 0 .4 4.8 2.9 2.9 0 0 0 2.04 2.05c1.79.45 7.56.45 7.56.45s5.77 0 7.56-.45a2.9 2.9 0 0 0 2.04-2.05A30.3 30.3 0 0 0 22 12a30.3 30.3 0 0 0-.4-4.8Zm-9.2 7.44V8.36l4.83 3.14-4.83 3.14Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 border-t border-white/10 pt-8 lg:mt-12 lg:pt-10">
+                        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+                            <div class="text-center md:px-4">
+                                <p class="text-xs font-bold tracking-widest text-hmif-secondary uppercase">
+                                    Sekretariat
+                                </p>
+                                <p class="mt-3 text-xs sm:text-sm leading-relaxed text-white/72">
+                                    Gedung Fakultas Teknik Lt. 2<br>
+                                    Jl. Prof. Dr. H. Hadari Nawawi
+                                </p>
+                            </div>
+
+                            <div class="text-center md:px-4 md:border-x md:border-white/10">
+                                <p class="text-xs font-bold tracking-widest text-hmif-secondary uppercase">
+                                    Jam Operasional
+                                </p>
+                                <p class="mt-3 text-xs sm:text-sm leading-relaxed text-white/72">
+                                    Senin - Jumat<br>
+                                    08:00 - 17:00 WIB
+                                </p>
+                            </div>
+
+                            <div class="text-center md:px-4">
+                                <p class="text-xs font-bold tracking-widest text-hmif-secondary uppercase">
+                                    Media Sosial
+                                </p>
+                                <p class="mt-3 text-xs sm:text-sm leading-relaxed text-white/72">
+                                    @hmif.untan<br>
+                                    YouTube: HMIF UNTAN TV
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-hmif-primary text-white pt-14 relative overflow-hidden">
+        <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-12 text-center relative z-10">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-slate-300">FOLLOW US</p>
+
+            <div class="mt-4 flex items-center justify-center gap-4">
+                <a href="https://instagram.com/hmif_ftuntan" target="_blank" rel="noopener noreferrer"
+                    class="text-white hover:text-hmif-secondary transition-colors" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M7.5 2A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9a5.5 5.5 0 0 0 5.5-5.5v-9A5.5 5.5 0 0 0 16.5 2h-9Zm9 1.5A4 4 0 0 1 20.5 7.5v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4h9Zm-4.5 2.25a5.75 5.75 0 1 0 0 11.5 5.75 5.75 0 0 0 0-11.5Zm0 2a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5Zm5.9-.95a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6Z" />
+                    </svg>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                    class="text-white hover:text-hmif-secondary transition-colors" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M21.6 7.2a2.9 2.9 0 0 0-2.04-2.05C17.77 4.7 12 4.7 12 4.7s-5.77 0-7.56.45A2.9 2.9 0 0 0 2.4 7.2 30.3 30.3 0 0 0 2 12a30.3 30.3 0 0 0 .4 4.8 2.9 2.9 0 0 0 2.04 2.05c1.79.45 7.56.45 7.56.45s5.77 0 7.56-.45a2.9 2.9 0 0 0 2.04-2.05A30.3 30.3 0 0 0 22 12a30.3 30.3 0 0 0-.4-4.8Zm-9.2 7.44V8.36l4.83 3.14-4.83 3.14Z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-hmif-secondary transition-colors" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M13.5 21v-7h2.3l.45-3h-2.75V9.18c0-.85.26-1.43 1.48-1.43h1.38V5.03A18.72 18.72 0 0 0 14.37 5C11.92 5 10.5 6.44 10.5 9.08V11H8v3h2.5v7h3Z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-hmif-secondary transition-colors" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M6.94 8.5A1.97 1.97 0 1 1 3 8.5a1.97 1.97 0 0 1 3.94 0ZM3.45 10h3v10h-3V10Zm5.08 0h2.87v1.37h.04c.4-.74 1.38-1.52 2.85-1.52 3.05 0 3.62 1.96 3.62 4.5V20h-3v-4.8c0-1.14-.02-2.6-1.62-2.6s-1.86 1.2-1.86 2.5V20h-2.9V10Z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-hmif-secondary transition-colors" aria-label="TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M14.5 3h2.6c.2 1.5 1.2 2.86 2.72 3.43v2.53a7.03 7.03 0 0 1-2.8-.84v5.4A5.52 5.52 0 1 1 11.5 8h.08v2.63a2.95 2.95 0 1 0 2.92 2.95V3Z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <img src="https://upload.wikimedia.org/wikipedia/id/0/03/Lambang_Universitas_Tanjungpura.png"
+                    alt="Logo UNTAN" class="h-14 sm:h-16" />
+                <div class="sm:border-l sm:border-white/30 sm:pl-5 pt-3 sm:pt-0">
+                    <p class="text-2xl sm:text-3xl font-bold tracking-widest uppercase">INFORMATIKA</p>
+                    <p class="text-[10px] sm:text-xs tracking-[0.22em] uppercase text-slate-200 mt-1">UNIVERSITAS
+                        TANJUNGPURA</p>
+                </div>
+            </div>
+
+            <div class="mt-6 text-xs sm:text-sm text-slate-200 leading-relaxed">
+                <p>Jl. Prof. Dr. H. Hadari Nawawi, Bansir Laut, Kec. Pontianak Tenggara,</p>
+                <p>Kota Pontianak, Kalimantan Barat 78124</p>
+            </div>
+
+            <div
+                class="mt-3 mb-10 text-[11px] text-slate-300 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                <span>E: info@informatika.untan.ac.id</span>
+                <span class="opacity-50">|</span>
+                <span>P: +62 851-7165-5161</span>
+                <span class="opacity-50">|</span>
+                <span>F: +62(561) 739637</span>
+                <span class="opacity-50">|</span>
+                <span>WA: +62 851-7165-5161</span>
+            </div>
+        </div>
+
+        <div class="w-full relative z-0 pointer-events-none">
+            <img src="https://informatika.untan.ac.id/logo/footer.png" alt="Footer Illustration"
+                class="w-full h-auto object-cover object-bottom" />
+        </div>
+    </footer>
 
     <!-- JavaScript eksternal (logika interaksi dipisah dari HTML) -->
     <script src="./assets/js/main.js"></script>
