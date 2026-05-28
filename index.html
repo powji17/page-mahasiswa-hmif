@@ -145,13 +145,18 @@
 
     <!-- About Section -->
     <section id="about" class="bg-white overflow-hidden">
-        <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-16 pt-20 lg:pt-24 pb-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-6 lg:px-16 pt-20 lg:pt-24 pb-16">
+            <!--
+                items-start: kolom kiri dan kanan sama-sama dimulai dari atas
+                Efek: top foto SEJAJAR dengan baris heading "Ruang Tumbuh Bagi..."
+                Foto tidak dipotong — tinggi alami gambar dipertahankan
+            -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
                 <!-- ─── Left: Text Content ─── -->
                 <div class="flex flex-col gap-8 order-1 lg:pr-6">
 
-                    <!-- Heading: 2 baris, tidak terlalu besar -->
+                    <!-- Heading -->
                     <h2 class="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-hmif-primary leading-snug">
                         Ruang Tumbuh Bagi<br>Mahasiswa Informatika
                     </h2>
@@ -170,7 +175,7 @@
                         </p>
                     </div>
 
-                    <!-- Stats: besar, jelas, proporsional -->
+                    <!-- Stats -->
                     <div class="flex gap-12 lg:gap-16 pt-6 border-t border-gray-100">
                         <div>
                             <p class="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-hmif-secondary leading-none tabular-nums">518</p>
@@ -189,33 +194,34 @@
 
                 <!-- ─── Right: Photo ─── -->
                 <!--
-                    KUNCI RESPONSIF:
-                    - w-full tanpa max-w pixel → foto memenuhi kolom grid
-                    - aspect-[4/5] terkunci pada rasio, tidak ada distorsi
-                    - offset dengan translate % → ikut skala berapapun zoom-nya
+                    FOTO TIDAK DIPOTONG:
+                    - Tidak ada aspect-ratio constraint
+                    - img menggunakan w-full h-auto → tinggi ALAMI foto dipertahankan
+                    - Offset block diposisikan dengan inset negatif relatif (%) agar ikut skala
+                    - items-start pada grid → top foto sejajar dengan top heading
                 -->
-                <div class="order-2 relative w-full aspect-[4/5] mt-8 lg:mt-0 lg:ml-4">
+                <div class="order-2 relative mt-8 lg:mt-0 lg:pl-4">
 
-                    <!-- Offset block biru tua (% based) -->
-                    <div class="absolute inset-0 translate-x-[6%] translate-y-[6%]
+                    <!-- Offset shadow block biru tua, posisi % (ikut skala zoom) -->
+                    <div class="absolute top-[4%] left-[8%] right-[-4%] bottom-[-4%]
                                 bg-hmif-primary rounded-2xl lg:rounded-3xl z-0 shadow-2xl"></div>
 
-                    <!-- Frame foto dengan efek premium -->
-                    <div class="absolute inset-0 rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl z-10 group cursor-default">
+                    <!-- Frame foto — overflow hidden, foto full width tanpa crop -->
+                    <div class="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl z-10 group cursor-default">
                         <img src="./assets/images/ruang-tumbuh/ruangtumbuh_foto.jpeg"
                              alt="Ruang Tumbuh HMIF Universitas Tanjungpura"
-                             class="w-full h-full object-cover object-center
-                                    transition-transform duration-700 ease-out group-hover:scale-105" />
-                        <!-- Gradient overlay: subtle, hanya di bawah -->
+                             class="w-full h-auto block
+                                    transition-transform duration-700 ease-out group-hover:scale-[1.03]" />
+                        <!-- Gradient overlay bawah -->
                         <div class="absolute inset-0
-                                    bg-gradient-to-t from-hmif-primary/40 via-transparent to-transparent
-                                    opacity-70 group-hover:opacity-50 transition-opacity duration-500"></div>
+                                    bg-gradient-to-t from-hmif-primary/45 via-transparent to-transparent
+                                    opacity-70 group-hover:opacity-45 transition-opacity duration-500"></div>
                     </div>
 
-                    <!-- Badge Inklusivitas & Kolaborasi (pojok kiri bawah foto) -->
-                    <div class="absolute z-20 bottom-[-4%] left-[-4%]
+                    <!-- Badge Inklusivitas & Kolaborasi pojok kiri bawah -->
+                    <div class="absolute z-20 bottom-[-3%] left-[0%]
                                 bg-hmif-secondary text-hmif-primary
-                                rounded-xl lg:rounded-2xl px-4 py-3 text-center shadow-2xl
+                                rounded-xl px-4 py-3 text-center shadow-2xl
                                 border-2 border-white/20"
                          style="min-width: 120px; max-width: 140px;">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
