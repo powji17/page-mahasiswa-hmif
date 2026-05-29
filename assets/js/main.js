@@ -25,6 +25,11 @@
 
     const languageToggles = document.querySelectorAll('[data-language-toggle]');
     const translationMap = {
+        // === HEADER & FOOTER ===
+        'INFORMATIKA': { id: 'INFORMATIKA', en: 'INFORMATICS' },
+        'UNIVERSITAS TANJUNGPURA': { id: 'UNIVERSITAS TANJUNGPURA', en: 'TANJUNGPURA UNIVERSITY' },
+        
+        // === HERO SECTION ===
         'Kehidupan Mahasiswa & Himpunan (HMIF)': {
             id: 'Kehidupan Mahasiswa & Himpunan (HMIF)',
             en: 'Student Life & Association (HMIF)'
@@ -41,6 +46,8 @@
             en: 'Building a collaborative ecosystem where technology meets creativity, shaping future industry leaders.'
         },
         'Lihat Struktur Kepengurusan': { id: 'Lihat Struktur Kepengurusan', en: 'View Organization Structure' },
+        
+        // === ABOUT SECTION ===
         'Ruang Tumbuh Bagi Mahasiswa Informatika': {
             id: 'Ruang Tumbuh Bagi<br class="hidden sm:block"> Mahasiswa Informatika',
             en: 'A Growth Space For<br class="hidden sm:block"> Informatics Students'
@@ -57,6 +64,8 @@
         'Partner Industri': { id: 'Partner Industri', en: 'Industry Partners' },
         'Inklusivitas & Kolaborasi': { id: 'Inklusivitas &amp;<br>Kolaborasi', en: 'Inclusivity &amp;<br>Collaboration' },
         'Partner & Kolaborator': { id: 'Partner &amp; Kolaborator', en: 'Partners & Collaborators' },
+        
+        // === DIVISI SECTION ===
         'Divisi Kepengurusan HMIF': { id: 'Divisi Kepengurusan HMIF', en: 'HMIF Management Divisions' },
         'Struktur organisasi yang dirancang untuk efisiensi dan pengembangan kapasitas anggota di berbagai bidang strategis.': {
             id: 'Struktur organisasi yang dirancang untuk efisiensi dan pengembangan kapasitas anggota di berbagai bidang strategis.',
@@ -76,11 +85,6 @@
             id: 'Mendukung mahasiswa untuk terus berkembang, dengan pembinaan dan kaderisasi yang berkelanjutan.',
             en: 'Supporting students to keep growing through continuous mentoring and cadre development.'
         },
-        'Pengembangan Organisasi': { id: 'Pengembangan Organisasi', en: 'Organizational Development' },
-        'Mendukung organisasi agar berjalan lebih rapi, terstruktur, dan semakin berkembang.': {
-            id: 'Mendukung organisasi agar berjalan lebih rapi, terstruktur, dan semakin berkembang.',
-            en: 'Helping the organization run in a more orderly, structured, and progressive way.'
-        },
         'Media Komunikasi dan Konten Digital': {
             id: 'Media Komunikasi dan Konten Digital',
             en: 'Communication Media and Digital Content'
@@ -88,11 +92,6 @@
         'Mengelola media dan komunikasi digital untuk menyampaikan informasi dengan lebih menarik dan mudah diakses.': {
             id: 'Mengelola media dan komunikasi digital untuk menyampaikan informasi dengan lebih menarik dan mudah diakses.',
             en: 'Managing digital media and communication to deliver information in a more engaging and accessible way.'
-        },
-        'Sosial Masyarakat': { id: 'Sosial Masyarakat', en: 'Community Service' },
-        'Berbagi dan berkontribusi melalui berbagai kegiatan sosial, sekaligus membawa dampak positif bagi masyarakat.': {
-            id: 'Berbagi dan berkontribusi melalui berbagai kegiatan sosial, sekaligus membawa dampak positif bagi masyarakat.',
-            en: 'Sharing and contributing through social activities while bringing positive impact to the community.'
         },
         'Inovasi dan Kompetisi Teknologi': {
             id: 'Inovasi dan Kompetisi Teknologi',
@@ -102,11 +101,23 @@
             id: 'Mengembangkan inovasi dan skill teknologi, sambil mendorong mahasiswa untuk berani mencoba dan ikut berbagai tantangan.',
             en: 'Developing innovation and technology skills while encouraging students to try new challenges.'
         },
+        'Pengembangan Organisasi': { id: 'Pengembangan Organisasi', en: 'Organizational Development' },
+        'Mendukung organisasi agar berjalan lebih rapi, terstruktur, dan semakin berkembang.': {
+            id: 'Mendukung organisasi agar berjalan lebih rapi, terstruktur, dan semakin berkembang.',
+            en: 'Helping the organization run in a more orderly, structured, and progressive way.'
+        },
+        'Sosial Masyarakat': { id: 'Sosial Masyarakat', en: 'Community Service' },
+        'Berbagi dan berkontribusi melalui berbagai kegiatan sosial, sekaligus membawa dampak positif bagi masyarakat.': {
+            id: 'Berbagi dan berkontribusi melalui berbagai kegiatan sosial, sekaligus membawa dampak positif bagi masyarakat.',
+            en: 'Sharing and contributing through social activities while bringing positive impact to the community.'
+        },
         'Kewirausahaan dan Kemitraan': { id: 'Kewirausahaan dan Kemitraan', en: 'Entrepreneurship and Partnership' },
         'Mengembangkan jiwa kewirausahaan, sekaligus membangun kolaborasi dan membuka peluang bersama berbagai mitra.': {
             id: 'Mengembangkan jiwa kewirausahaan, sekaligus membangun kolaborasi dan membuka peluang bersama berbagai mitra.',
             en: 'Developing an entrepreneurial mindset while building collaboration and opportunities with partners.'
         },
+        
+        // === KEGIATAN UNGGULAN SECTION ===
         'Kegiatan Unggulan': { id: 'Kegiatan Unggulan', en: 'Featured Activities' },
         'Kegiatan tahunan yang menjadi ikon Informatika UNTAN.': {
             id: 'Kegiatan tahunan yang menjadi ikon Informatika UNTAN.',
@@ -124,31 +135,41 @@
             id: 'Kegiatan buka bersama seluruh keluarga Informatika Untan yang selalu diadakan setiap tahunnya.',
             en: 'An annual iftar gathering for the entire Informatics UNTAN family.'
         },
-        'Okt': { id: 'Okt', en: 'Oct' },
         'Ultah Informatika': { id: 'Ultah Informatika', en: 'Informatics Anniversary' },
         'Perayaan ulang tahun Informatika UNTAN, momen kebersamaan dan kebanggaan seluruh keluarga besar Informatika.': {
             id: 'Perayaan ulang tahun Informatika UNTAN, momen kebersamaan dan kebanggaan seluruh keluarga besar Informatika.',
             en: 'The Informatics UNTAN anniversary celebration, a moment of togetherness and pride for the whole Informatics family.'
         },
-        'Agu': { id: 'Agu', en: 'Aug' },
+        'Bootcamp HMIF': { id: 'Bootcamp HMIF', en: 'HMIF Bootcamp' },
         'Program intensif pengembangan skill teknis mahasiswa Informatika bersama mentor profesional dari industri.': {
             id: 'Program intensif pengembangan skill teknis mahasiswa Informatika bersama mentor profesional dari industri.',
             en: 'An intensive program for developing Informatics students technical skills with professional mentors from industry.'
         },
+        'Mar': { id: 'Mar', en: 'Mar' },
+        'Agu': { id: 'Agu', en: 'Aug' },
+        'Okt': { id: 'Okt', en: 'Oct' },
+        'Nov': { id: 'Nov', en: 'Nov' },
+
+        // === STUDY CLUB SECTION ===
         'STUDY CLUB': { id: 'STUDY CLUB', en: 'STUDY CLUB' },
         'Belajar logika dan algoritma bersama, di mana kalian bisa berkembang dan membuka peluang mengikuti kompetisi pemrograman di berbagai level.': {
             id: 'Belajar logika dan algoritma bersama, di mana kalian bisa berkembang dan membuka peluang mengikuti kompetisi pemrograman di berbagai level.',
             en: 'Learn logic and algorithms together, grow your abilities, and open opportunities to join programming competitions at various levels.'
         },
-        'Di sini, kalian bisa belajar membuat website dan aplikasi web, sekaligus mengembangkan ide menjadi sesuatu yang nyata.': {
-            id: 'Di sini, kalian bisa belajar membuat website dan aplikasi web, sekaligus mengembangkan ide menjadi sesuatu yang nyata.',
-            en: 'Here, you can learn to build websites and web applications while turning ideas into something real.'
+        'Gali potensi tersembunyi dari tumpukan data! Di sini kita akan bereksplorasi dengan algoritma <em>Machine Learning</em>, membedah teknik klasifikasi, hingga melatih model prediktif untuk menghasilkan <em>insight</em> yang bermakna.': {
+            id: 'Gali potensi tersembunyi dari tumpukan data! Di sini kita akan bereksplorasi dengan algoritma <em>Machine Learning</em>, membedah teknik klasifikasi, hingga melatih model prediktif untuk menghasilkan <em>insight</em> yang bermakna.',
+            en: 'Unearth hidden potential from piles of data! Here we will explore <em>Machine Learning</em> algorithms, dissect classification techniques, and train predictive models to generate meaningful <em>insights</em>.'
         },
-        'Belajar memahami sistem dan cara menjaganya, supaya lebih siap menghadapi berbagai ancaman digital.': {
-            id: 'Belajar memahami sistem dan cara menjaganya, supaya lebih siap menghadapi berbagai ancaman digital.',
-            en: 'Learn to understand systems and how to protect them, so you are better prepared for digital threats.'
+        'Software Development (Soon)': { id: 'Software Development (Soon)', en: 'Software Development (Soon)' },
+        'Wujudkan idemu jadi produk digital yang nyata! Kita akan ngoding bareng dari merancang <em>frontend</em> yang interaktif, membangun <em>backend</em> yang tangguh, serta mengintegrasikan berbagai API untuk menciptakan aplikasi web masa kini.': {
+            id: 'Wujudkan idemu jadi produk digital yang nyata! Kita akan ngoding bareng dari merancang <em>frontend</em> yang interaktif, membangun <em>backend</em> yang tangguh, serta mengintegrasikan berbagai API untuk menciptakan aplikasi web masa kini.',
+            en: 'Turn your ideas into real digital products! We will code together, from designing interactive <em>frontends</em>, building robust <em>backends</em>, and integrating various APIs to create modern web applications.'
         },
+
+        // === GALERI SECTION ===
         'Galeri Keseruan': { id: 'Galeri Keseruan', en: 'Activity Gallery' },
+        
+        // === CTA & CONTACT SECTION ===
         'Ada yang Ingin Ditanyakan Seputar HMIF?': {
             id: 'Ada yang Ingin Ditanyakan Seputar HMIF?',
             en: 'Have Questions About HMIF?'
@@ -159,13 +180,27 @@
         },
         'Hubungi Kami': { id: 'Hubungi Kami', en: 'Contact Us' },
         'Sekretariat': { id: 'Sekretariat', en: 'Secretariat' },
+        'Gedung Fakultas Teknik Lt. 2<br>Jl. Prof. Dr. H. Hadari Nawawi': {
+            id: 'Gedung Fakultas Teknik Lt. 2<br>Jl. Prof. Dr. H. Hadari Nawawi',
+            en: 'Faculty of Engineering Building, 2nd Floor<br>Jl. Prof. Dr. H. Hadari Nawawi'
+        },
         'Jam Operasional': { id: 'Jam Operasional', en: 'Operating Hours' },
-        'Senin - Jumat 08:00 - 17:00 WIB': {
+        'Senin - Jumat<br>08:00 - 17:00 WIB': {
             id: 'Senin - Jumat<br>08:00 - 17:00 WIB',
             en: 'Monday - Friday<br>08:00 - 17:00 WIB'
         },
         'Media Sosial': { id: 'Media Sosial', en: 'Social Media' },
-        'FOLLOW US': { id: 'IKUTI KAMI', en: 'FOLLOW US' }
+        
+        // === FOOTER SPECIFIC ===
+        'FOLLOW US': { id: 'FOLLOW US', en: 'FOLLOW US' },
+        'Jl. Prof. Dr. H. Hadari Nawawi, Bansir Laut, Kec. Pontianak Tenggara,': {
+            id: 'Jl. Prof. Dr. H. Hadari Nawawi, Bansir Laut, Kec. Pontianak Tenggara,',
+            en: 'Jl. Prof. Dr. H. Hadari Nawawi, Bansir Laut, South East Pontianak District,'
+        },
+        'Kota Pontianak, Kalimantan Barat 78124': {
+            id: 'Kota Pontianak, Kalimantan Barat 78124',
+            en: 'Pontianak City, West Kalimantan 78124'
+        }
     };
 
     function normalizeText(value) {
